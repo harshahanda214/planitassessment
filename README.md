@@ -1,10 +1,10 @@
 # planitassessment
-#Selenium Pyhton testing
+# Selenium Python testing
 
 This readme for how the input values(valid/invalid) are validated in the contact form
 and add items to the shopping cart and verify them.
 
-#Installation  requirements
+# Installation  requirements
 Below softwares are required to create and execute the test cases
 
 1.Download selenium
@@ -16,7 +16,7 @@ Below softwares are required to create and execute the test cases
 4.Download pycharm latest version community edition
 
 
-#Create a python project
+# Create a python project
 1.To create a python project 
 
 2.Goto file menu and click on create a new project
@@ -24,7 +24,7 @@ Below softwares are required to create and execute the test cases
 3.Once the project is cerated create a python file such as test_planit.py file in this case
 
 
-#Selenium and Python 
+# Selenium and Python 
 1.Once the python file is created 
 
 2.Install the packages required to run selenium inside python
@@ -50,7 +50,7 @@ import unittest
 import assertion
 
 
-#How to install packages using Pycharm
+# How to install packages using Pycharm
 1.Goto File in the Menu
 
 2.Goto Settings
@@ -68,7 +68,7 @@ import assertion
 8.Once you have all the required packages installed import them your project's python file
 
 
-#Start writing the code
+# Start writing the code
 1.The code starts with creating a class class PythonOrgSearch(unittest.TestCase):
 
 2.Once this class is created various functions can be written to complete the testing
@@ -77,7 +77,7 @@ import assertion
 
 4.All the functions representing the test cases in should start with keyword test_ such as "def test_<test_case_name>:
 
-#Demo code for setting up the driver 
+# Demo code for setting up the driver 
 User can use any browser for testing 
 In this case, Pyhton uses chromedriver to run the browser
 download the chrome browser on your local machine and give the path of your local directory where the chrome driver is saved:
@@ -87,7 +87,7 @@ self.driver = webdriver.Chrome(r"C:\Users\kgaur\Downloads\chromedriver_win32\chr
 
   
   
-#First Test case to validate the validation messages in the contact page and then enter the valid input values in them and again validate the fields 
+# First Test case to validate the validation messages in the contact page and then enter the valid input values in them and again validate the fields 
 1.Requires below steps to follow:
 
 2.Call the contact page 
@@ -102,7 +102,7 @@ self.driver = webdriver.Chrome(r"C:\Users\kgaur\Downloads\chromedriver_win32\chr
 
 7.Check if the validation messages disappear
 
-#Demo code for first test case:
+# Demo code for first test case:
  def test_setUp(self):
   driver= self.driver
   self.driver.get("https://jupiter.cloud.planittesting.com/#/")
@@ -144,7 +144,7 @@ self.driver = webdriver.Chrome(r"C:\Users\kgaur\Downloads\chromedriver_win32\chr
 
 
 
-#Second test case to validate the success message after entering the valid values in the contact us page for mandatory fields
+# Second test case to validate the success message after entering the valid values in the contact us page for mandatory fields
 
 1.Goto contact us page 
 
@@ -156,7 +156,7 @@ self.driver = webdriver.Chrome(r"C:\Users\kgaur\Downloads\chromedriver_win32\chr
 
 5.Validate the success message
 
-#Demo code for second test case:
+# Demo code for second test case:
  def test_validCase(self):
         driver = self.driver
         self.driver.get("https://jupiter.cloud.planittesting.com/#/")
@@ -186,7 +186,7 @@ self.driver = webdriver.Chrome(r"C:\Users\kgaur\Downloads\chromedriver_win32\chr
 3.Test the email and the message appearing due to entering invalid email in the email field
 validate both the messages
 
-#Demo code for third test case:
+# Demo code for third test case:
  def test_invalidData(self):
           driver=self.driver
           self.driver.get("https://jupiter.cloud.planittesting.com/#/")
@@ -205,7 +205,7 @@ validate both the messages
           self.assertEqual(sucmsg,'We welcome your feedback - but we won\'t get it unless you complete the form correctly.')
 
 
-#Fourth test case to add items in the shopping cart and verify them
+# Fourth test case to add items in the shopping cart and verify them
 1.Goto shopping page
 
 2.Select two quantity of the first item and one quantity for the second item
@@ -214,7 +214,7 @@ validate both the messages
 
 4.Once added verify their presence and details associated with the items
 
-#Demo code for fourth test case:
+# Demo code for fourth test case:
  def test_addToCart(self):
       driver = self.driver
       self.driver.get("https://jupiter.cloud.planittesting.com/#/")
@@ -242,23 +242,23 @@ validate both the messages
        print(i.text)
 
 
-#Close the browser
+# Close the browser
 
 1.Once all the test cases run quit the browser using a tearDown function
 
-#Demo code to close the browser:
+# Demo code to close the browser:
  def tearDown(self):
       driver=self.driver
       self.driver.quit()
 
-#The last and the final task is to call the main class to run all the functions or test cases
+# The last and the final task is to call the main class to run all the functions or test cases
 
-#Demo code for the main class:
+# Demo code for the main class:
 
 if __name__ == "__main__":
    unittest.main()
    
-#Directory structure 
+# Directory structure 
 1. All the test file are stored under the test package 
 
 2. In this case, the test package was created in the python project and inside this package a python file was created to run the test cases.
@@ -266,7 +266,7 @@ if __name__ == "__main__":
 3. Directory structure:
 seleniumproject -> test -> test_planit.py
 
-#Final step to run the Python project or file using pycharm
+# Final step to run the Python project or file using pycharm
 1.Import the file into your directory 
 
 2.Open pycharm
